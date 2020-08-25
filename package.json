@@ -1,0 +1,27 @@
+{
+  "name": "Foodfy",
+  "version": "1.0.0",
+  "description": "Projeto criado durante o Bootcamp LaunchBase",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcaffa/Foodfy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcaffa/Foodfy/issues"
+  },
+  "homepage": "https://github.com/pcaffa/Foodfy#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  }
+}

@@ -1,0 +1,58 @@
+{% extends "layout.njk" %} 
+
+{% block head %}
+    <title>{{item.title}} </title>
+{% endblock %}
+
+{% block content %}
+    <main> 
+        <section>
+            <div class="card-recipe" id="{{item.id}}">
+                <div class="card-img">
+                    <img src="/assets/{{item.id}}.png" alt="{{item.title}}">
+                </div>
+                <div class="card-info">
+                    <h3 class="recipe">{{item.title}}</h3>
+                    <p class="author">{{item.author}}</p>
+                </div>                
+            </div>
+
+            <div class="card-ingredients">
+                <h3>Ingredientes</h3>
+                <a class="hideContent">ESCONDER</a>            
+                <div id="content0" class="MOSTRAR">
+                    <ul>
+                        {% for ingredient in item.ingredients %}
+                            <li>{{ingredient}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>            
+            </div>
+
+            <div class="card-preparation">
+                <h3>Modo de preparo</h3>
+                <a class="hideContent">ESCONDER</a>            
+                <div id="content1" >
+                    <ul>
+                        {% for preparation in item.preparation %}
+                        <li>{{preparation}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>            
+            </div>
+
+            <div class="card-information">
+                <h3>Informações adicionais</h3>
+                <a class="hideContent">ESCONDER</a>
+                <p id="content2" >{{item.information}}</p>
+            </div>
+
+        </section>                        
+    </main>
+
+<script src="/scripts.js"></script>
+
+{% endblock %}
+
+
+
