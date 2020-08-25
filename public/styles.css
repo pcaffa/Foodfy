@@ -1,15 +1,14 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     bottom: 0;
     padding: 0;
 }
 body {
-    font-family:'Roboto';
+    font-family:'Roboto-Regular ', sans-serif;
     max-width: 100vw;
     max-height: 100vh;
 }
-
 header {
     margin: 38px 230px 36px 230px;
 }
@@ -64,7 +63,6 @@ main {
     margin-bottom: 20px;
     font-size: 24px;
 }
-
 .cards {
     max-width: 900px;
     display: grid;
@@ -105,7 +103,6 @@ footer {
     text-align: center;
     padding-top: 23px;    
 }
-
 .info-foodfy h2 {
     font-size: 24px;
     font-weight: bold;
@@ -130,13 +127,11 @@ footer {
     position: fixed;   
     opacity: 0;
     visibility: hidden;
- 
 }
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
 }
-
 .modal {
     width: 660px;
     height: 413px;
@@ -146,7 +141,6 @@ footer {
     margin: 25vh auto;   
     position: relative;    
 }
-
 .modal-img  img {
     width: 600px;
     height: 200px;
@@ -174,18 +168,58 @@ footer {
     cursor: pointer;   
 }
 
+/***PAGE not-found*****/
 .error {
     color: black;
     font-size: 50px;
     text-align: center;
     margin-top: 10vh;
 }
-
 .error img {
     width: 400px;
     height: 300px;
 }
-
 .error h4 {
     font-size: 20px;
+}
+
+/***RECIPE SELECTED*****/
+.card-recipe .card-img img{
+    width: 1000px;
+    height: 300px;
+}
+.card-recipe .card-info {  
+    text-align: center;
+}
+.card-recipe .recipe {
+    font-size: 36px;
+    margin-top: 50px;
+    font-family: 'Roboto-Bold', sans-serif;
+    color: #111111;
+}
+.card-recipe .author {
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 50px;
+}
+.card-ingredients  h3, .card-preparation  h3, .card-information h3 {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 24px;
+    color: #111111;   
+    display: inline; 
+}
+.card-ingredients a, .card-preparation  a, .card-information a {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;    
+}
+.card-ingredients  ul, .card-preparation  ul, .card-information p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin: 20px 0 39px 0;    
+}
+.card-ingredients  ul, .card-preparation  ul {
+    margin-left: 15px;   
 }

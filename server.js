@@ -26,17 +26,13 @@ server.get("/about", function(req,res){
     return res.render("about", { about })
 })
 
-server.get("/recipe", function(req,res){
-    return res.render("recipe", { items: recipes })
+server.get("/recipes", function(req,res){
+    return res.render("recipes", { items: recipes })
 })
 
-server.get("/preparationMode?:index", function (req, res) {
-    const recipeIndex = req.params.index 
-    console.log(recipeIndex);
-    console.log('chegou na preparationMode')
-    console.log(recipes[recipeIndex]);
-
-    return res.render("preparationMode", { item: recipes[recipeIndex] })
+server.get("/recipes/:index", function (req, res) {
+    const recipeIndex = req.params.index; 
+    return res.render("recipe", { item: recipes[recipeIndex] })
 })
 
 
